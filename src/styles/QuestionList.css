@@ -1,0 +1,22 @@
+.QuestionList-title{
+    font-size: 48px;
+    text-align: center;
+}
+.QuestionList{
+    display: grid;
+	grid-template-columns: repeat(4, 240px);
+	gap: 40px;
+	place-content: center;
+	margin: 3em 0 0 0;
+}
+.sendButton{
+    position: relative;
+    left: 500px;
+    width: 245px;
+    height: 72px;
+    border-radius: 8px;
+    background-color: #ed4040;
+    color: white;
+    font-size: 20px;
+    margin: 40px;
+}

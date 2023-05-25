@@ -1,0 +1,39 @@
+.AnswerInterface-section{
+    width: 864px;
+    height: 708px;
+    margin: 0 auto;
+}
+.returnButton{
+    display: block;
+    text-align: left;
+    width: 39px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 20px;
+}
+.buttons-container{
+    display: flex;
+    justify-content: space-between;
+}
+.backButton{
+    width: 39px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 20px;
+    background: none;
+    border: none;
+}
+.nextButton{
+    width: 39px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    margin: 20px;
+    background: none;
+    border: none;
+}

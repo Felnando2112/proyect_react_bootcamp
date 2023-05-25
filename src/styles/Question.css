@@ -1,0 +1,27 @@
+.question-container{
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 393px;
+    border-radius: 8px;
+    background-color: #C4C4C4;
+}
+.question-container-video{
+    width: 245px;
+    height: 336px;
+    border-radius: 8px 8px 0px 0px;
+    background-color: black;
+}
+.question-playButton{
+    position: relative;
+    top: 80%;
+    left: 10%;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: #C4C4C4;
+}
+.question-description{
+    text-align: left;
+    margin: 10px;
+}
