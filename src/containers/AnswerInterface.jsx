@@ -2,6 +2,7 @@ import React, {useContext} from "react";
 import AppContext from "../context/AppContext";
 import Answer from "../components/Answer";
 import '../styles/AnswerInterface.css';
+import { Link } from "react-router-dom";
 
 const AnswerInterface = () => {
     const {questions} = useContext(AppContext);
@@ -21,7 +22,6 @@ const AnswerInterface = () => {
         pageP = max;
     }
 
-    
 
     return(
         <section className="AnswerInterface-section">
@@ -30,8 +30,8 @@ const AnswerInterface = () => {
                 <Answer arr={found}/>
             </div>
             <div className="buttons-container">
-            <a href={`/Questions/${pageP}`} className="backButton">Atras</a>
-            <a href={`/Questions/${pageN}`} className="nextButton">Siguiente</a>
+            <Link to={`/Questions/${pageP}`} reloadDocument className="backButton">Atras</Link>
+            <Link to={`/Questions/${pageN}`} reloadDocument className="nextButton">Siguiente</Link>
             </div>
         </section>
     );
