@@ -10,11 +10,18 @@
     width: 245px;
     height: 336px;
     border-radius: 8px 8px 0px 0px;
+    background: none;
+}
+.question-video{
+    z-index: 100;
+    width: 245px;
+    height: 336px;
+    border-radius: 8px 8px 0px 0px;
     background-color: black;
 }
 .question-playButton{
     position: relative;
-    top: 80%;
+    bottom: 20%;
     left: 10%;
     width: 48px;
     height: 48px;
@@ -24,4 +31,22 @@
 .question-description{
     text-align: left;
     margin: 10px;
+}
+@media (max-width: 950px){
+    .question-container{
+        width: 135px;
+        height: 283px;
+    }
+    .question-container-video{
+        width: 135px;
+        height: 226px;
+    }
+    .question-video{
+        width: 135px;
+        height: 226px;
+    }
+    .question-playButton{
+        width: 30px;
+        height: 30px;
+    }
 }

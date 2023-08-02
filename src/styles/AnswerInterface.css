@@ -12,6 +12,8 @@
     line-height: 16px;
     font-weight: 400;
     margin: 20px;
+    color:black;
+    text-decoration: none;
 }
 .buttons-container{
     display: flex;
@@ -26,6 +28,8 @@
     margin: 20px;
     background: none;
     border: none;
+    color:black;
+    text-decoration: none;
 }
 .nextButton{
     width: 39px;
@@ -36,4 +40,12 @@
     margin: 20px;
     background: none;
     border: none;
+    color:black;
+    text-decoration: none;
+}
+@media (max-width: 950px){
+    .nextButton{
+        position: absolute;
+        left: 300px;
+    }
 }

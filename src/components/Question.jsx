@@ -1,17 +1,20 @@
 import React from "react";
-import '../styles/Question.css' 
+import { Link } from "react-router-dom";
+import playButton from '../assets/17343587831556273568.svg';
+import '../styles/Question.css' ;
 
 const Question = ({question}) => {
     
+
     return (
     <div className="question-container">
 
-        <a  href='/Response' className="question-container-video">
-            <div className="question-video"></div>
-            <button className="question-playButton">PLAY</button>
-        </a>
+        <Link to={`/Questions/${question.id}`} className="question-container-video">
+            <video  className="question-video" autoPlay muted loop></video>
+            <button className="question-playButton"><img src={playButton} alt="grabar"/></button>
+        </Link>
         
-        <p className="question-description">{question}</p>
+        <p className="question-description">{question.pregunta}</p>
         
     </div>
     );

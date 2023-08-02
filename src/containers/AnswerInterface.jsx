@@ -1,34 +1,37 @@
-import React, {useState , useContext} from "react";
+import React, {useContext} from "react";
 import AppContext from "../context/AppContext";
 import Answer from "../components/Answer";
 import '../styles/AnswerInterface.css';
 
-const AnswerInterface = (id) => {
+const AnswerInterface = () => {
     const {questions} = useContext(AppContext);
-    const [local,setLocal] = useState(0);
-    const handleClick = () => {
-        if(local < 3){
-        setLocal(local + 1);
-        }else {
-            setLocal(0);
-        }
+    const location = window.location.href;
+    const regExp = /.*\/([0-9]+)/;
+    const found = location.match(regExp);
+    var page = Number(found[1]);
+    var max = questions.length - 1;
+    
+
+    var pageN = page+1;
+    if(pageN > max){
+        pageN = 0;
     }
-    const handleClick2 = () => {
-        if(local > 0){
-        setLocal(local - 1);
-        }else {
-            setLocal(3);
-        }
+    var pageP = page-1;
+    if(pageP < 0){
+        pageP = max;
     }
+
+    
+
     return(
         <section className="AnswerInterface-section">
             <a href="/" className="returnButton">Volver</a>
             <div>
-                <Answer question={questions[local]}/>
+                <Answer arr={found}/>
             </div>
             <div className="buttons-container">
-            <button onClick={handleClick2} className="backButton">Atras</button>
-            <button onClick={handleClick} className="nextButton">Siguiente</button>
+            <a href={`/Questions/${pageP}`} className="backButton">Atras</a>
+            <a href={`/Questions/${pageN}`} className="nextButton">Siguiente</a>
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ function App() {
     <AppContext.Provider value={initialState}>
         <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route exact path='/Response' element={<Response/>}/>
+          <Route path='/Questions/:id' element={<Response/>}/>
         </Routes>
     </AppContext.Provider>
     </BrowserRouter>

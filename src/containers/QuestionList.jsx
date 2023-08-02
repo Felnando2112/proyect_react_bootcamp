@@ -11,7 +11,7 @@ const QuestionList = () => {
             <div className="QuestionList">
                 {
                     questions.map(question => (
-                        <Question key={question.id} question={question.pregunta}/>
+                        <Question key={question.id} question={question} />
                     ))
                 }
             </div>
