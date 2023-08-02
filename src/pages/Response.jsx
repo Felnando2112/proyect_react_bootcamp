@@ -1,5 +1,4 @@
-import React,{useContext} from "react";
-import AppContext from "../context/AppContext";
+import React from "react";
 import AnswerInterface from '../containers/AnswerInterface';
 
 const Response = () =>{

@@ -16,7 +16,7 @@ const arr = [
 ]
 
 const useInitialState = () => {
-  const [questions,setQuestions] = useState(arr);
+  const [questions] = useState(arr);
     
   
 return {

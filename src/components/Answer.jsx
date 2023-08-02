@@ -20,9 +20,7 @@ const Answer = ({arr}) => {
     const [minutes, setMinutes] = useState(0);
     const [downloadLink,setDownloadLink] = useState('');
     const [isRecording,setIsRecording] = useState(false);
-    const [error,setError] = useState(null);
-    const [audioSource,setAudioSource] = useState(null);
-    const [videoSource,setVideoSource] = useState(null);
+    
     
     
     
@@ -111,13 +109,8 @@ const Answer = ({arr}) => {
             const stream = await navigator.mediaDevices.getUserMedia(constraints);
             gotStream(stream);
           } catch (bug) {
-            setError(bug);
-            console.log(error);
+            console.log(bug);
           }
-        }
-        if(!navigator.mediaDevices && !navigator.mediaDevices.getUserMedia){
-          setError(new Error('browser API navigator.mediaDevices.getUserMedia is not available'));
-
         }
         await getStream();
       }
@@ -135,7 +128,6 @@ const Answer = ({arr}) => {
         {downloadLink ? <button  onClick={startRecording} disabled={isRecording} className="answer-playButton" ><img src={replayButton} alt="regrabar"/></button> : 
         <button  onClick={startRecording} disabled={isRecording} className="answer-playButton" ><img src={playButton} alt="grabar"/></button>}  
         <p className="answer-description">{pregunta}</p>
-        {error && <p>{error.message}</p>}
         {downloadLink && (<a href={downloadLink} className='linkDeDescarga' download='file.mp4'>descargar respuesta</a>)}
     </div>
     </>

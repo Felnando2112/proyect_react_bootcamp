@@ -1,4 +1,4 @@
-import React, {useState,useEffect,useContext} from "react";
+import React, {useContext} from "react";
 import Question from "../components/Question";
 import '../styles/QuestionList.css';
 import AppContext from "../context/AppContext";
