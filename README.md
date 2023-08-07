@@ -1,6 +1,6 @@
 # Video Quiz
 ## General Info
-Web application for the creation of online questionnaires to be answered through videos.
+Web application for the creation of online quizzes to be answered through videos.
 ## Technologies
 - React js
 - axios
